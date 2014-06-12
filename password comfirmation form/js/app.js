@@ -4,28 +4,29 @@
 // Hide hints
 $("form span").hide();
 
+var $password = $("#password");
+var $confirm = $("#confirm_password");
+
 function passwordEvent(){
 		// find out if password is valid	
-	if ($(this).val().length > 8){
+	if ($password.val().length > 8){
 		// hide hint if valid 
-		$(this).next().hide();
+		$password.next().hide();
 	} else {
 		// else show hints
-		$(this).next().show();
+		$password.next().show();
 	}
 }
 
 function confirmPasswordEvent(){
-	console.log("hallo!");
 	// find out if password and confirmation match
-	if ($(this).val() == $(this).parent().prev().children("#password").val()){
+	if ($confirm.val() == $password.val()){
 		// hide hint if match
-		$(this).next().hide();
+		$confirm.next().hide();
 		// else show hint 
 	} else {
-		$(this).next().show();
-	}
-	
+		$confirm.next().show();
+	}	
 }
 
 // When event happens on password input
