@@ -30,8 +30,8 @@ function confirmPasswordEvent(){
 }
 
 // When event happens on password input
-$("#password").focus(passwordEvent).keyup(passwordEvent);
+$password.focus(passwordEvent).keyup(passwordEvent).focus(confirmPasswordEvent).keyup(confirmPasswordEvent);
 
 // When event happpens on confirmation input
-$("#confirm_password").focus(confirmPasswordEvent).keyup(confirmPasswordEvent);
+$confirm.focus(confirmPasswordEvent).keyup(confirmPasswordEvent);
 
