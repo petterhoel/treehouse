@@ -22,7 +22,7 @@ function arePasswordsMatching(){
 }
 
 function canSubmit(){
-	return isPasswordValid() && arePasswordsMatching();
+	return isPasswordValid() && arePasswordsMatching() && isUsernamePresent();
 }
 
 
