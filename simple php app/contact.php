@@ -9,7 +9,7 @@ include('includes/header.php'); ?>
 			
 			<p>I'd love to hear from you! Complete the form to send me an e-mail. </p>
 
-			<form method="post">
+			<form method="post" action="contact-process.php">
 				<table>
 					<tr>
 						<th>
