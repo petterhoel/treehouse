@@ -1,3 +1,7 @@
+<?php 
+$pageTitle = "Unique t-shirts designed by a frog";
+?>
+
 <?php include('includes/header.php'); ?>
 
 

@@ -1,3 +1,7 @@
+<?php
+$pageTitle = "Contact Mike";
+?>
+
 <?php include('includes/header.php'); ?>
 
 	<div class="section page">

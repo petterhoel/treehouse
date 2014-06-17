@@ -1,3 +1,6 @@
+<?php 
+$pageTitle = "Mike's Full Catalog of Shirts";
+?>
 <?php include('includes/header.php'); ?>
 
 	<div class="section page">
