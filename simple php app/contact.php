@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	// TODO: Send email
 
-	header("Location: contact-thanks.php?status=thanks");
+	header("Location: contact.php?status=thanks");
 	exit; //Stops any other code from running
 }
 ?>
