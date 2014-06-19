@@ -1,7 +1,5 @@
  <?php
-
  $flavours = array("Vanilla", "Chocolate", "Strawberry", "Cookie Dough");
-
  ?>
 
  <pre>
@@ -32,10 +30,9 @@ $countries[1] = array(
 	"population" => 81799600,
 	"anthem" => "Song of the Germans"
 );
-
 ?>
-// <pre> <?php var_dump($countries); ?>	</pre>
 
+<pre> <?php var_dump($countries); ?>	</pre>
 
 <?php
 /*
@@ -54,9 +51,7 @@ $country = array(
 <html>
 <body>
 <?php foreach ($countries as $country) { ?>
-
 	<h1><?php echo $country["name"]; ?></h1>
-
 	<dl>
 		<dt>Country code</dt>
 		<dd><?php echo $country["code"]; ?></dd>

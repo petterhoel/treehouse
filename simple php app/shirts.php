@@ -1,5 +1,4 @@
 <?php
-
 $products =array();
 $products[101] = array(
     "name" => "Logo Shirt, Red",
@@ -41,21 +40,15 @@ $products[108] = array(
     "img" => "img/shirts/shirt-108.jpg",    
     "price" => 25,
 );
-
 ?>
-
-
 <?php 
 $pageTitle = "Mike's Full Catalog of Shirts";
 $section = "shirts";
 include('includes/header.php'); 
 ?>
-
 	<div class="section shirts page">
 		<div class="wrapper">
-
 			<h1>Mike's Full Catalog of Shirts</h1>
-
 			<ul class="products">
 				<?php foreach ($products as $product) { 
 					echo '<li>';
@@ -67,13 +60,7 @@ include('includes/header.php');
 					echo '</li>';
 					} 
 				?>
-
 			</ul>
-
-
 		</div>
 	</div>
-
-
-
 <?php include('includes/footer.php'); ?>	
