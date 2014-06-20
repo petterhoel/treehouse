@@ -9,24 +9,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo "You must specify a name, email address and message";
 		exit;
 	}
-
-	foreach ($_POST as $$value) {
+	foreach ($_POST as $value) {
 		if (stripos($value, 'Content-Type:') !== FALSE){
 			echo "There was a problem with the information you entered";
 			exit;
 		}
 	}
-
 	if ($_POST["address"] != ""){
 		echo "Your form submission has an error.";
 		exit;
 	}
-
+	require_once "includes/phpmailer/PHPMailerAutoload.php";
+	$mail = new PHPMailer;
+	if (!$mail->validateAddress($email)){
+		echo "Your email address is invalid. Please check it again.";
+		exit;
+	}
 	$email_body = "";
 	$email_body = $email_body . "Name: " . $name . "\n";
 	$email_body = $email_body . "Email " . $email . "\n";
 	$email_body = $email_body . "Message: " . $message;
-	// TODO: Send email
+	
+
+	
 	header("Location: contact.php?status=thanks");
 	exit; //Stops any other code from running
 }
