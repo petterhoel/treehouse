@@ -9,14 +9,8 @@ include('includes/header.php');
 			<h1>Mike's Full Catalog of Shirts</h1>
 			<ul class="products">
 				<?php foreach ($products as $product_id => $product) { 
-					echo '<li>';
-					echo '<a href="shirt.php?id=' . $product_id . '">';
-					echo '<img src="' . $product["img"] . '" alt="' . $product["name"] . '">';
-					echo '<p>' . $product["name"] . '</p>';
-					echo '<p>Price:' . $product["price"] . '</p>';
-					echo '</a>';
-					echo '</li>';
-					} 
+					echo get_list_view_html($product_id, $product);
+				} 
 				?>
 			</ul>
 		</div>
