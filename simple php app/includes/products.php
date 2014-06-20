@@ -1,7 +1,6 @@
 <?php
 
 function get_list_view_html($product_id, $product){
-
     $output = '<li>';
     $output = $output . '<a href="shirt.php?id=' . $product_id . '">';
     $output = $output . '<img src="' . $product["img"] . '" alt="' . $product["name"] . '">';
@@ -10,11 +9,7 @@ function get_list_view_html($product_id, $product){
     $output = $output . '</a>';
     $output = $output . '</li>';
     return $output;
-
 }
-
-
-
 $products =array();
 $products[101] = array(
 	"name" => "Logo Shirt, Red",
