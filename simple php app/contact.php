@@ -26,12 +26,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		exit;
 	}
 	$email_body = "";
-	$email_body = $email_body . "Name: " . $name . "\n";
-	$email_body = $email_body . "Email " . $email . "\n";
+	$email_body = $email_body . "Name: " . $name . "<br>";
+	$email_body = $email_body . "Email " . $email . "<br>";
 	$email_body = $email_body . "Message: " . $message;
-	
-
-	
+	$mail->SetFrom($email, $name);
+	$address = "somone@somewhere.internet";
+	$mail->AddAddress($address, "Shirts 4 Mike");
+	$mail->Subject = "Test fra treehouse tut, Shirts 4 Mike";
+	$mail->MsgHTML($email_body);
+	if (!$mail->Send()){
+		echo "There was a problem sending your message: " . $mail->ErrorInfo;
+		exit;
+	} 
 	header("Location: contact.php?status=thanks");
 	exit; //Stops any other code from running
 }
